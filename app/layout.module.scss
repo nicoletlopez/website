@@ -1,0 +1,35 @@
+.main {
+  // background-color: #fffff2;
+  background-color: #ffffff;
+  flex-grow: 1;
+  padding: 5rem;
+  position: relative;
+  border-radius: .5rem 0 0 0;
+  // box-shadow: .25rem .5rem rgba(0, 0, 0, .3);
+  // box-shadow: .5rem .5rem rgba(0, 0, 0, .3);
+  // box-shadow: 7.5rem 9.5rem 3rem 7rem black;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr;
+}
+
+.journal {
+  display: flex;
+}
+
+.paperOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat;
+  background-image: url('/paper.jpg');
+  opacity: .25;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  border-radius: inherit;
+}

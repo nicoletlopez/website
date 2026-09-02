@@ -1,0 +1,13 @@
+@use '../styles' as *;
+
+.container {}
+
+.header {}
+
+.title {
+  text-transform: capitalize;
+}
+
+.subtitle {
+  @include font-secondary;
+}

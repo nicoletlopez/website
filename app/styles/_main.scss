@@ -1,0 +1,11 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: var(--font-primary), var(--font-secondary);
+  height: 100%;
+  color: #444444;
+}
