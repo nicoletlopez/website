@@ -4,8 +4,55 @@
   }
 
   li {
+    @include font-secondary;
+
+    position: relative;
+    margin: 4rem 0 0 5rem;
     list-style: none;
-    background: lightgreen;
-    margin: 4rem 0 0 1rem;
+
+    a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      background: lightgreen;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        /* Stretches to full parent width */
+        height: 100%;
+        /* Stretches to full parent height */
+        left: -50%;
+        top: 0;
+        background-color: #3b82f6;
+        /* Coordinates: Top-Center (50% 0%), Bottom-Left (0% 100%), Bottom-Right (100% 100%) */
+        clip-path: polygon(50% 0%, 25% 50%, 50% 100%);
+        background: inherit;
+      }
+
+      &:link,
+      &:visited {
+        color: var(--color-text);
+      }
+
+
+    }
+
+    /*     &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      // height: 100%;
+      // width: 50px;
+      height: 0;
+      width: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid blue;
+      // transform: rotate(45deg);
+    } */
+
   }
 }

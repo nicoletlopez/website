@@ -1,15 +1,22 @@
+import { navigation } from '@/data/navigation';
 import styles from './Navbar.module.scss';
+import Link from 'next/link';
 
 export default function Navbar() {
+
+  const elMenu = navigation.map(navItem => (
+    <li key={navItem.href}>
+      <Link href={navItem.href} style={{backgroundColor: navItem?.backgroundColor}}>
+        <h2>{navItem.label}</h2>
+      </Link>
+    </li>
+  ));
+
   return (
     <>
       <nav className={styles.navigation}>
         <ul>
-          <li><h3>Home</h3></li>
-          <li>Projects</li>
-          <li>Blog</li>
-          <li>Interests</li>
-          <li>FAQs</li>
+          {elMenu}
         </ul>
       </nav>
     </>
