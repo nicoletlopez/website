@@ -8,6 +8,9 @@ export default function Home() {
           <h3 className={styles.title}>If found, please return to</h3>
           <h1 className={styles.subtitle}>Nicole Lopez</h1>
         </header>
+        <main>
+          
+        </main>
       </section>
     </>
   );

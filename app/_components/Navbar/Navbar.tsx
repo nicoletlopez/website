@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function Navbar() {
 
   const elMenu = navigation.map(navItem => (
-    <li key={navItem.href}>
-      <Link href={navItem.href} style={{backgroundColor: navItem?.backgroundColor}}>
+    <li key={navItem.href} style={{backgroundColor: navItem?.backgroundColor}}>
+      <Link href={navItem.href}>
         <h2>{navItem.label}</h2>
       </Link>
     </li>

@@ -14,7 +14,14 @@
       display: block;
       padding: 1rem;
       text-decoration: none;
-      background: lightgreen;
+      background: inherit;
+      position: relative;
+      transition: left 0.25s;
+      left: 0;
+
+      &:hover {
+        left: -2rem;
+      }
 
       &::before {
         content: "";
@@ -23,9 +30,8 @@
         /* Stretches to full parent width */
         height: 100%;
         /* Stretches to full parent height */
-        left: -50%;
+        left: -49.5%;
         top: 0;
-        background-color: #3b82f6;
         /* Coordinates: Top-Center (50% 0%), Bottom-Left (0% 100%), Bottom-Right (100% 100%) */
         clip-path: polygon(50% 0%, 25% 50%, 50% 100%);
         background: inherit;
@@ -35,8 +41,6 @@
       &:visited {
         color: var(--color-text);
       }
-
-
     }
 
     /*     &::before {
@@ -53,6 +57,5 @@
       border-right: 10px solid blue;
       // transform: rotate(45deg);
     } */
-
   }
 }
