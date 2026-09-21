@@ -4,8 +4,8 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-        Nicole Lopez
-        Frontend Developer
+        {/* Nicole Lopez */}
+        {/* Frontend Developer */}
       </header>
     </>
   );

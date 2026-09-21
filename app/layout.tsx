@@ -4,7 +4,6 @@ import "./globals.scss";
 import styles from "./layout.module.scss";
 import Navbar from "@/components/Navbar/Navbar";
 import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 
 
 const primary = DM_Sans({
@@ -38,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <section className={styles.journal}>
           <Navbar />
           <main className={styles.main}>
-            {children}
+            <div className={styles.content}>{children}</div>
             <div className={styles.paperOverlay}></div>
           </main>
         </section>

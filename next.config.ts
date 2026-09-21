@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
   sassOptions: {
     loadPaths: ['./app/_styles'],
     additionalData: `@use './index' as *;`
+  },
+  images: {
+    localPatterns: [
+      {
+        pathname: '/**'
+      },
+    ]
   }
 };
 

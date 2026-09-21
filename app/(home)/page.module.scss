@@ -1,6 +1,9 @@
-.container {}
+.container {
+}
 
-.header {}
+.header {
+  text-align: center;
+}
 
 .title {
   text-transform: capitalize;
@@ -8,4 +11,8 @@
 
 .subtitle {
   @include font-secondary;
+
+  display: inline;
+  border-bottom: 2px var(--color-text) solid;
+  padding: 0 1rem;
 }

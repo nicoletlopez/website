@@ -1,17 +1,42 @@
-@use 'variables' as *;
+@use "sass:map";
+@use "variables" as *;
 
 @mixin font-primary {
-  font-family: var(--font-primary)
+  font-family: var(--font-primary);
 }
 
 @mixin font-secondary {
-  font-family: var(--font-secondary)
+  font-family: var(--font-secondary);
+}
+
+@mixin font-size($size) {
+  font-size: map.get($font-sizes, $size);
 }
 
 @mixin breakpoint($size) {
-  $value: map-get($breakpoints, $size);
+  $value: map.get($breakpoints, $size);
 
   @media screen and (max-width: $value) {
     @content;
   }
+}
+
+@mixin unselectable {
+  // Prevent text/image highlight selection
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // Prevent image dragging (ghost image)
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+
+  // Optional: Prevents right-click and pointer interactions entirely
+  pointer-events: none;
 }
