@@ -4,6 +4,7 @@ import "./globals.scss";
 import styles from "./layout.module.scss";
 import Navbar from "@/components/Navbar/Navbar";
 import Header from "@/components/Header/Header";
+import { Menu } from "lucide-react";
 
 
 const primary = DM_Sans({
@@ -37,6 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <section className={styles.journal}>
           <Navbar />
           <main className={styles.main}>
+            <button className={styles.menuBtn}>
+              <Menu />
+            </button>
             <div className={styles.content}>{children}</div>
             <div className={styles.paperOverlay}></div>
           </main>

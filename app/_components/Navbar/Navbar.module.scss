@@ -1,4 +1,10 @@
 .navigation {
+  width: var(--sidebar-width);
+
+  @include breakpoint(sm) {
+    margin-left: calc(var(--sidebar-width) * -1);
+  }
+
   ul {
     padding-inline-start: 0;
   }

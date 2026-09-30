@@ -8,7 +8,7 @@ export default function Identification() {
     name: "Nicole Lopez",
     occupation: "Software Developer",
     yoe: 6,
-    address: "Acacia Ridge, Greater Brisbane, QLD",
+    address: "Acacia Ridge, Brisbane, QLD",
   }
 
   const titles: Record<string, string> = {
